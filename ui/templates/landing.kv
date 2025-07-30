@@ -1,0 +1,38 @@
+<LandingLayout>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 20
+
+    BoxLayout:
+        size_hint_y: None
+        height: '80dp'
+        spacing: 10
+
+        Label:
+            text: "Welcome to TaskManager"
+            font_size: '24sp'
+            bold: True
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: 10
+        size_hint_y: None
+        height: '40dp'
+
+        Button:
+            text: "Login"
+            on_release: root.on_login()
+
+        Button:
+            text: "Register"
+            on_release: root.on_register()
+
+    Label:
+        text: root.get_description()
+        font_size: '16sp'
+        color: .5, .5, .5, 1
+        size_hint_y: None
+        height: '40dp'
+
+    Widget:
+        size_hint_y: 1
